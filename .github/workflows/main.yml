@@ -11,7 +11,8 @@ jobs:
     steps: 
     - uses: actions/checkout@v4
     - name: Install dependencies
-      run: npm install
+      run: git pull; npm install
+
 
     - name: Deploy to AWS EC2
       uses: appleboy/scp-action@master
