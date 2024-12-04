@@ -18,5 +18,8 @@ jobs:
       with:
         source: "./"  # This now correctly points to the current directory
         target: "/home/ubuntu/testActions"
-    
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: |
+          ${{ secrets.SSH_PRIVATE_KEY }}
     
