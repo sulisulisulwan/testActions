@@ -22,8 +22,7 @@ jobs:
 
       run: |
         echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
-        echo "hello"
-      # ssh -o StrictHostKeyChecking=no -i private_key ${REMOTE_USER}@${REMOTE_HOST}
+        ssh -o StrictHostKeyChecking=no -i private_key ${REMOTE_USER}@${REMOTE_HOST}
 
       # echo "Listing home directory:"
       # ls -la ~
