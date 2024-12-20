@@ -22,10 +22,11 @@ jobs:
 
       run: |
         echo "$SSH_PRIVATE_KEY" > github-ec2.pem && chmod 600 github-ec2.pem
-        ssh -o StrictHostKeyChecking=no -i github-ec2.pem ${REMOTE_USER}@${REMOTE_HOST}
-        echo "Current directory: $(pwd)"
-        echo "Listing home directory:"
-        ls -la ~
+        cat github-ec2.pem
+      # ssh -o StrictHostKeyChecking=no -i github-ec2.pem ${REMOTE_USER}@${REMOTE_HOST}
+      # echo "Current directory: $(pwd)"
+      # echo "Listing home directory:"
+      # ls -la ~
       # uses: appleboy/scp-action@master
       # with:
       #   source: "./"  # This now correctly points to the current directory
